@@ -1,6 +1,8 @@
 const inputArea = document.getElementById('inputArea');
 const outputArea = document.getElementById('outputArea');
+const copyBtn = document.getElementById('copyBtn');
 const clearBtn = document.getElementById('clearBtn');
+const copyToClipboardToast = document.getElementById('copyToClipboardToast')
 
 /**
  * @param {string} input
@@ -23,6 +25,13 @@ function spongemock(input) {
 
 inputArea.addEventListener('input', (val) => {
     outputArea.value = spongemock(inputArea.value);
+});
+
+copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(outputArea.value).then(() => {
+        const toast = new bootstrap.Toast(copyToClipboardToast);
+        toast.show();
+    });
 });
 
 clearBtn.addEventListener('click', () => {

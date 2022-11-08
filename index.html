@@ -3,25 +3,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Spongemocker</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <h1>Spongemocker</h1>
 <div class="row mb-3">
-    <label for="inputArea" class="col-sm-2 col-form-label">Eingabe</label>
+    <label for="inputArea" class="col-sm-2 col-form-label">Input</label>
     <div class="col-sm-10">
-        <textarea id="inputArea" class="form-control" aria-label="Eingabe"></textarea>
+        <textarea id="inputArea" class="form-control" aria-label="Input"></textarea>
     </div>
 </div>
 <div class="row mb-3">
-    <label for="outputArea" class="col-sm-2 col-form-label">Ausgabe</label>
+    <label for="outputArea" class="col-sm-2 col-form-label">Output</label>
     <div class="col-sm-10">
-        <textarea id="outputArea" class="form-control" aria-label="Ausgabe" readonly></textarea>
+        <textarea id="outputArea" class="form-control" aria-label="Output" readonly></textarea>
     </div>
 </div>
-<button id="clearBtn" class="btn btn-danger">Eingabe löschen</button>
+<button id="copyBtn" class="btn btn-primary">Copy</button>
+<button id="clearBtn" class="btn btn-danger">Clear</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="copyToClipboardToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Output has been copied to clipboard</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
