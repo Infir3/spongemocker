@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Your everyday helper to spongemock some text">
     <title>Spongemocker</title>
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -13,29 +14,40 @@
     <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-<h1>Spongemocker</h1>
-<div class="row mb-3">
-    <label for="inputArea" class="col-sm-2 col-form-label">Input</label>
-    <div class="col-sm-10">
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h1>Spongemocker</h1>
+            <div class="row mb-3">
+                <label for="inputArea" class="col-sm-2 col-form-label">Input</label>
+                <div class="col-sm-10">
         <textarea
                 id="inputArea"
                 class="form-control"
                 aria-label="Input"
         ></textarea>
-    </div>
-</div>
-<div class="row mb-3">
-    <label for="outputArea" class="col-sm-2 col-form-label">Output</label>
-    <div class="col-sm-10">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="outputArea" class="col-sm-2 col-form-label">Output</label>
+                <div class="col-sm-10">
         <textarea
                 id="outputArea"
                 class="form-control"
                 aria-label="Output"
                 readonly
         ></textarea>
+                </div>
+            </div>
+            <button id="clearBtn" class="btn btn-danger">Clear</button>
+        </div>
+    </div>
+    <div class="row">
+        <p>Inspired by this <a href="https://knowyourmeme.com/memes/mocking-spongebob">meme</a></p>
     </div>
 </div>
-<button id="clearBtn" class="btn btn-danger">Clear</button>
+
 
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
