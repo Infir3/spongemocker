@@ -4,8 +4,9 @@ const copyBtn = document.getElementById("copyBtn");
 const clearBtn = document.getElementById("clearBtn");
 
 /**
+ * Spongemocks the given input text.
  * @param {string} input
- * @returns {string} output
+ * @returns {string}
  */
 function spongemock(input) {
   let output = "";
