@@ -15,7 +15,7 @@ new ClipboardJS(copyBtn);
 copyBtn.addEventListener("click", () => {
   Toastify({
     text: "Output copied to clipboard!",
-    duration: 2000,
+    duration: 1000,
     gravity: "bottom", // `top` or `bottom`
     position: "center", // `left`, `center` or `right`
     style: {
@@ -28,9 +28,5 @@ copyBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   textInput.value = "";
   textOutput.value = "";
-  textInput.focus();
-});
-
-window.addEventListener("DOMContentLoaded", () => {
   textInput.focus();
 });
