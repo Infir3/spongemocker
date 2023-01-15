@@ -22,6 +22,7 @@ copyBtn.addEventListener("click", () => {
       background: "green",
     },
   }).showToast();
+  inputArea.focus();
 });
 
 clearBtn.addEventListener("click", () => {
