@@ -27,4 +27,9 @@ copyBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   inputArea.value = "";
   outputArea.value = "";
+  inputArea.focus();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  inputArea.focus();
 });
