@@ -21,8 +21,8 @@ copyBtn.addEventListener("click", () => {
     style: {
       background: "green",
     },
+    callback: () => inputArea.focus(), // Invoked when the toast is dismissed
   }).showToast();
-  inputArea.focus();
 });
 
 clearBtn.addEventListener("click", () => {
