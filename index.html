@@ -5,49 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Your everyday helper to spongemock some text" />
     <title>Spongemocker</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="stylesheet" href="pico.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">
-          <h1>Spongemocker</h1>
-          <div class="row mb-3">
-            <label for="inputArea" class="col-sm-2 col-form-label">Input</label>
-            <div class="col-sm-10">
-              <textarea id="inputArea" class="form-control" aria-label="Input"></textarea>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="outputArea" class="col-sm-2 col-form-label">Output</label>
-            <div class="col-sm-10">
-              <textarea id="outputArea" class="form-control" aria-label="Output" readonly></textarea>
-            </div>
-          </div>
-          <button id="copyBtn" class="btn btn-primary" data-clipboard-target="#outputArea">Copy</button>
-          <button id="clearBtn" class="btn btn-danger">Clear</button>
-        </div>
+    <main class="container">
+      <h1>Spongemocker</h1>
+      <label for="inputArea">Input</label>
+      <textarea id="inputArea" aria-label="Input" placeholder="This is app is so useful!"></textarea>
+      <label for="outputArea">Output</label>
+      <textarea id="outputArea" aria-label="Output" placeholder="tHiS Is aPp iS So uSeFuL!" readonly></textarea>
+      <div class="grid">
+        <button id="copyBtn" data-clipboard-target="#outputArea" data-tooltip="Copy output to clipboard">Copy</button>
+        <button id="clearBtn" class="secondary" data-tooltip="Clear input">Clear</button>
       </div>
-      <div class="row">
-        <p>
-          Inspired by this
-          <a href="https://knowyourmeme.com/memes/mocking-spongebob">meme</a>
-        </p>
-      </div>
-    </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+      <p>
+        Inspired by this
+        <a href="https://knowyourmeme.com/memes/mocking-spongebob">meme</a>
+      </p>
+    </main>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="libs/clipboard.min.js"></script>
