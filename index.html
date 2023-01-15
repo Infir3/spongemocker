@@ -11,13 +11,12 @@
   </head>
   <body>
     <main class="container">
-      <h1>Spongemocker</h1>
-      <label for="inputArea">Input</label>
-      <textarea id="inputArea" aria-label="Input" placeholder="This is app is so useful!"></textarea>
-      <label for="outputArea">Output</label>
-      <textarea id="outputArea" aria-label="Output" placeholder="tHiS Is aPp iS So uSeFuL!" readonly></textarea>
-      <div class="grid">
-        <button id="copyBtn" data-clipboard-target="#outputArea" data-tooltip="Copy output to clipboard">Copy</button>
+      <label for="textInput">Input</label>
+      <input id="textInput" type="text" aria-label="Input" placeholder="This is app is so useful!" />
+      <label for="textOutput">Output</label>
+      <input id="textOutput" type="text" aria-label="Output" placeholder="tHiS Is aPp iS So uSeFuL!" readonly />
+      <div class="button-container">
+        <button id="copyBtn" data-clipboard-target="#textOutput" data-tooltip="Copy output to clipboard">Copy</button>
         <button id="clearBtn" class="secondary" data-tooltip="Clear input">Clear</button>
       </div>
       <p>

@@ -1,12 +1,12 @@
 import { spongemock } from "./spongemock.js";
 
-const inputArea = document.getElementById("inputArea");
-const outputArea = document.getElementById("outputArea");
+const textInput = document.getElementById("textInput");
+const textOutput = document.getElementById("textOutput");
 const copyBtn = document.getElementById("copyBtn");
 const clearBtn = document.getElementById("clearBtn");
 
-inputArea.addEventListener("input", () => {
-  outputArea.value = spongemock(inputArea.value);
+textInput.addEventListener("input", () => {
+  textOutput.value = spongemock(textInput.value);
 });
 
 // instantiate ClipboardJS by passing the HTML element of the copy button
@@ -21,16 +21,16 @@ copyBtn.addEventListener("click", () => {
     style: {
       background: "green",
     },
-    callback: () => inputArea.focus(), // Invoked when the toast is dismissed
+    callback: () => textInput.focus(), // Invoked when the toast is dismissed
   }).showToast();
 });
 
 clearBtn.addEventListener("click", () => {
-  inputArea.value = "";
-  outputArea.value = "";
-  inputArea.focus();
+  textInput.value = "";
+  textOutput.value = "";
+  textInput.focus();
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  inputArea.focus();
+  textInput.focus();
 });
